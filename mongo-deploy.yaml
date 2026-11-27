@@ -11,23 +11,23 @@ spec:
     matchLabels:
       app: microservicio-libreria
       name: mongo-pod
-    template:
-      metadata:
+  template:
+    metadata:
+      name: mongo-pod
+      labels:
+        app: microservicio-libreria
         name: mongo-pod
-        labels:
-          app: microservicio-libreria
-          name: mongo-pod
-      spec:
-        containers:
-          - name: mongo
-            image: mongo:8.3.17-noble
-            command: 
-            - /bin/bash
-            - -c
-            env:
-            - name: MONGO_INITDB_ROOT_USERNAME
-              value: admin
-            - name: MONGO_INITDB_ROOT_PASSWORD
-              value: P4$$l3cf1r3
-            ports:
-            - containerPort: 27017
+    spec:
+      containers:
+        - name: mongo
+          image: mongo:8.3.17-noble
+          command: 
+          - /bin/bash
+          - -c
+          env:
+          - name: MONGO_INITDB_ROOT_USERNAME
+            value: admin
+          - name: MONGO_INITDB_ROOT_PASSWORD
+            value: P4$$l3cf1r3
+          ports:
+          - containerPort: 27017
