@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", 
 	ProjectSection(SolutionItems) = preProject
 		microservicio-gateway-deploy.yaml = microservicio-gateway-deploy.yaml
 		microservicio-gateway-pod.yaml = microservicio-gateway-pod.yaml
+		microservicio-gateway-service.yaml = microservicio-gateway-service.yaml
 		microservicio-libreria-deploy.yaml = microservicio-libreria-deploy.yaml
 		microservicio-libreria-pod.yaml = microservicio-libreria-pod.yaml
 		microservicio-libreria-service.yaml = microservicio-libreria-service.yaml
