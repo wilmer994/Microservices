@@ -16,7 +16,7 @@ spec:
       name: sqlserver-pod
       labels:
         app: microservicio-seguridad
-        type: database
+        name: mssql-pod
     spec:
       containers:
         - name: mssql
