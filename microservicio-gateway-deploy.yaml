@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio-gateway-deploy
+  labels:
+    name: microservicio-gateway-deploy
+    app: microservice
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: microservicio-gateway
+      type: microservice
+  template:
+    metadata:
+      name: microservicio-gateway-pod
+      labels:
+        app: microservicio-gateway
+        type: microservice
+    spec:
+      containers:
+        - name: microservicio-gateway-app
+          image: wilmer994/serviciosapigateway:latest
+          ports:
+            - containerPort: 80

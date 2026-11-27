@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: microservicio-seguridad-pod
+  labels:
+    app: microservicio-seguridad
+    type: microservice
+spec:
+  containers:
+    - name: microservicio-seguridad-app
+      image: wilmer994/serviciosapiseguridad:latest
+      ports:
+        - containerPort: 80

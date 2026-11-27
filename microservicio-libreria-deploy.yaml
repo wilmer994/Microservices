@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio-libreria-deploy
+  labels:
+    name: microservicio-libreria-deploy
+    app: microservicio
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: microservicio-libreria
+      type: microservice
+  template:
+    metadata:
+      name: microservicio-libreria-pod
+      labels:
+        app: microservicio-libreria
+        type: microservice
+    spec:
+      containers:
+        - name: microservicio-libreria-app
+          image: wilmer994/serviciosapilibreria:latest
+          ports:
+            - containerPort: 80
+          env:
+          - name: MongoDb__ConnectionString
+            value: mongodb://wilmer994:P4$$w0rd@mongo-service:27017
+

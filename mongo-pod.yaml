@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mongo-pod
+  labels:
+    app: microservicio-libreria
+    name: mongo-pod
+spec:
+  containers:
+    - name: mongo
+      image: mongo:8.3.17-noble
+      command: 
+      - /bin/bash
+      - -c
+      env:
+      - name: MONGO_INITDB_ROOT_USERNAME
+        value: wilmer994
+      - name: MONGO_INITDB_ROOT_PASSWORD
+        value: P4$$w0rd
+      ports:
+      - containerPort: 27017

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.11.12328.437 stable
+VisualStudioVersion = 18.11.12328.437
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servicios.api.Libreria", "Servicios.api.Libreria\Servicios.api.Libreria.csproj", "{FF4FC2C6-5F3C-4365-84AC-DF3D9DAA4765}"
 EndProject
@@ -11,8 +11,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servicios.api.Gateway", "Se
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{C85BBC42-BAEA-4DCE-881A-E0F8ECCB6F11}"
 	ProjectSection(SolutionItems) = preProject
+		microservicio-gateway-deploy.yaml = microservicio-gateway-deploy.yaml
+		microservicio-gateway-pod.yaml = microservicio-gateway-pod.yaml
+		microservicio-libreria-deploy.yaml = microservicio-libreria-deploy.yaml
 		microservicio-libreria-pod.yaml = microservicio-libreria-pod.yaml
+		microservicio-libreria-service.yaml = microservicio-libreria-service.yaml
+		microservicio-seguridad-deploy.yaml = microservicio-seguridad-deploy.yaml
+		microservicio-seguridad-pod.yaml = microservicio-seguridad-pod.yaml
+		microservicio-seguridad-service.yaml = microservicio-seguridad-service.yaml
+		mongo-deploy.yaml = mongo-deploy.yaml
+		mongo-pod.yaml = mongo-pod.yaml
+		mongo-service.yaml = mongo-service.yaml
+		sqlserver-deploy.yaml = sqlserver-deploy.yaml
+		sqlserver-pod.yaml = sqlserver-pod.yaml
+		sqlserver-service.yaml = sqlserver-service.yaml
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{EDA73690-C13C-4DB6-B3AF-10E4C8563CF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

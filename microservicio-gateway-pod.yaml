@@ -1,18 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: microservicio-gateway
+  name: microservicio-gateway-pod
   labels:
     app: microservicio-gateway
+    type: microservice
 spec:
   containers:
-    - name: microservicio-gateway
-      image: wilmer994/servicios.api.gateway:latest
-      imagePullPolicy: Always
+    - name: microservicio-gateway-app
+      image: wilmer994/serviciosapigateway:latest
       ports:
-        - name: http
-          containerPort: 80
-          protocol: TCP
-      env:
-        - name: ASPNETCORE_URLS
-          value: http://+:80
+        - containerPort: 80

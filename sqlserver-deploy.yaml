@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mssql-deploy
+  labels:
+    name: mssql-deploy
+    app: microservicio-seguridad
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservicio-seguridad
+      name: mssql-pod
+  template:
+    metadata:
+      name: sqlserver-pod
+      labels:
+        app: microservicio-seguridad
+        type: database
+    spec:
+      containers:
+        - name: mssql
+          image: mcr.microsoft.com/mssql/server
+          ports:
+          - containerPort : 1433
+          env: 
+          - name: ACCEPT_EULA
+            value: "Y"
+          - name: SA_PASSWORD
+            value: "P4$$l3cf1r3"
